@@ -14,6 +14,115 @@ export type Database = {
   }
   public: {
     Tables: {
+      challenge_messages: {
+        Row: {
+          challenge_id: string
+          content: string
+          created_at: string
+          id: string
+          sender_id: string
+        }
+        Insert: {
+          challenge_id: string
+          content: string
+          created_at?: string
+          id?: string
+          sender_id: string
+        }
+        Update: {
+          challenge_id?: string
+          content?: string
+          created_at?: string
+          id?: string
+          sender_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "challenge_messages_challenge_id_fkey"
+            columns: ["challenge_id"]
+            isOneToOne: false
+            referencedRelation: "challenges"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      challenge_videos: {
+        Row: {
+          challenge_id: string
+          created_at: string
+          id: string
+          title: string | null
+          user_id: string
+          video_url: string
+        }
+        Insert: {
+          challenge_id: string
+          created_at?: string
+          id?: string
+          title?: string | null
+          user_id: string
+          video_url: string
+        }
+        Update: {
+          challenge_id?: string
+          created_at?: string
+          id?: string
+          title?: string | null
+          user_id?: string
+          video_url?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "challenge_videos_challenge_id_fkey"
+            columns: ["challenge_id"]
+            isOneToOne: false
+            referencedRelation: "challenges"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      challenges: {
+        Row: {
+          challenger_id: string
+          created_at: string
+          deadline: string | null
+          description: string | null
+          id: string
+          opponent_id: string
+          scope: Database["public"]["Enums"]["challenge_scope"]
+          status: Database["public"]["Enums"]["challenge_status"]
+          title: string
+          updated_at: string
+          winner_id: string | null
+        }
+        Insert: {
+          challenger_id: string
+          created_at?: string
+          deadline?: string | null
+          description?: string | null
+          id?: string
+          opponent_id: string
+          scope?: Database["public"]["Enums"]["challenge_scope"]
+          status?: Database["public"]["Enums"]["challenge_status"]
+          title: string
+          updated_at?: string
+          winner_id?: string | null
+        }
+        Update: {
+          challenger_id?: string
+          created_at?: string
+          deadline?: string | null
+          description?: string | null
+          id?: string
+          opponent_id?: string
+          scope?: Database["public"]["Enums"]["challenge_scope"]
+          status?: Database["public"]["Enums"]["challenge_status"]
+          title?: string
+          updated_at?: string
+          winner_id?: string | null
+        }
+        Relationships: []
+      }
       portfolio_items: {
         Row: {
           category: string | null
@@ -133,7 +242,14 @@ export type Database = {
       [_ in never]: never
     }
     Enums: {
-      [_ in never]: never
+      challenge_scope: "world" | "country" | "state"
+      challenge_status:
+        | "pending"
+        | "accepted"
+        | "active"
+        | "completed"
+        | "declined"
+        | "cancelled"
     }
     CompositeTypes: {
       [_ in never]: never
@@ -260,6 +376,16 @@ export type CompositeTypes<
 
 export const Constants = {
   public: {
-    Enums: {},
+    Enums: {
+      challenge_scope: ["world", "country", "state"],
+      challenge_status: [
+        "pending",
+        "accepted",
+        "active",
+        "completed",
+        "declined",
+        "cancelled",
+      ],
+    },
   },
 } as const
