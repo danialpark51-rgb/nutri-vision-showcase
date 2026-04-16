@@ -40,6 +40,8 @@ function ProtectedLayout() {
           <Route path="/analyze" element={<AnalyzeFood />} />
           <Route path="/body-analysis" element={<BodyAnalysis />} />
           <Route path="/track" element={<DailyTracker />} />
+          <Route path="/challenges" element={<Challenges />} />
+          <Route path="/challenges/:id" element={<ChallengeDetail />} />
           <Route path="/leaderboard" element={<Leaderboard />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/user/:userId" element={<UserProfile />} />
