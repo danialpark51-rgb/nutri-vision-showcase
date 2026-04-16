@@ -1,11 +1,11 @@
-import { Home, Camera, BarChart3, Trophy, User } from "lucide-react";
+import { Home, Camera, BarChart3, Trophy, User, ScanFace } from "lucide-react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 
 const navItems = [
   { icon: Home, label: "Home", path: "/" },
-  { icon: BarChart3, label: "Track", path: "/track" },
   { icon: Camera, label: "Scan", path: "/analyze" },
+  { icon: ScanFace, label: "Body", path: "/body-analysis" },
   { icon: Trophy, label: "Rank", path: "/leaderboard" },
   { icon: User, label: "Profile", path: "/profile" },
 ];

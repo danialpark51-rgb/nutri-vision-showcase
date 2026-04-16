@@ -7,6 +7,7 @@ import BottomNav from "@/components/BottomNav";
 import Dashboard from "@/pages/Dashboard";
 import AnalyzeFood from "@/pages/AnalyzeFood";
 import DailyTracker from "@/pages/DailyTracker";
+import BodyAnalysis from "@/pages/BodyAnalysis";
 import Leaderboard from "@/pages/Leaderboard";
 import Profile from "@/pages/Profile";
 import UserProfile from "@/pages/UserProfile";
@@ -35,6 +36,7 @@ function ProtectedLayout() {
         <Routes>
           <Route path="/" element={<Dashboard />} />
           <Route path="/analyze" element={<AnalyzeFood />} />
+          <Route path="/body-analysis" element={<BodyAnalysis />} />
           <Route path="/track" element={<DailyTracker />} />
           <Route path="/leaderboard" element={<Leaderboard />} />
           <Route path="/profile" element={<Profile />} />
