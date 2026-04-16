@@ -36,6 +36,7 @@ function ProtectedLayout() {
         <Routes>
           <Route path="/" element={<Dashboard />} />
           <Route path="/analyze" element={<AnalyzeFood />} />
+          <Route path="/body-analysis" element={<BodyAnalysis />} />
           <Route path="/track" element={<DailyTracker />} />
           <Route path="/leaderboard" element={<Leaderboard />} />
           <Route path="/profile" element={<Profile />} />
