@@ -8,6 +8,8 @@ import Dashboard from "@/pages/Dashboard";
 import AnalyzeFood from "@/pages/AnalyzeFood";
 import DailyTracker from "@/pages/DailyTracker";
 import BodyAnalysis from "@/pages/BodyAnalysis";
+import Challenges from "@/pages/Challenges";
+import ChallengeDetail from "@/pages/ChallengeDetail";
 import Leaderboard from "@/pages/Leaderboard";
 import Profile from "@/pages/Profile";
 import UserProfile from "@/pages/UserProfile";
