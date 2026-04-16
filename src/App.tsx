@@ -8,6 +8,8 @@ import Dashboard from "@/pages/Dashboard";
 import AnalyzeFood from "@/pages/AnalyzeFood";
 import DailyTracker from "@/pages/DailyTracker";
 import BodyAnalysis from "@/pages/BodyAnalysis";
+import Challenges from "@/pages/Challenges";
+import ChallengeDetail from "@/pages/ChallengeDetail";
 import Leaderboard from "@/pages/Leaderboard";
 import Profile from "@/pages/Profile";
 import UserProfile from "@/pages/UserProfile";
@@ -38,6 +40,8 @@ function ProtectedLayout() {
           <Route path="/analyze" element={<AnalyzeFood />} />
           <Route path="/body-analysis" element={<BodyAnalysis />} />
           <Route path="/track" element={<DailyTracker />} />
+          <Route path="/challenges" element={<Challenges />} />
+          <Route path="/challenges/:id" element={<ChallengeDetail />} />
           <Route path="/leaderboard" element={<Leaderboard />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/user/:userId" element={<UserProfile />} />
