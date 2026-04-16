@@ -14,7 +14,117 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      portfolio_items: {
+        Row: {
+          category: string | null
+          created_at: string
+          description: string | null
+          id: string
+          image_url: string | null
+          title: string
+          updated_at: string
+          user_id: string
+          video_url: string | null
+        }
+        Insert: {
+          category?: string | null
+          created_at?: string
+          description?: string | null
+          id?: string
+          image_url?: string | null
+          title: string
+          updated_at?: string
+          user_id: string
+          video_url?: string | null
+        }
+        Update: {
+          category?: string | null
+          created_at?: string
+          description?: string | null
+          id?: string
+          image_url?: string | null
+          title?: string
+          updated_at?: string
+          user_id?: string
+          video_url?: string | null
+        }
+        Relationships: []
+      }
+      profiles: {
+        Row: {
+          age: number | null
+          available_for_hire: boolean | null
+          avatar_url: string | null
+          bio: string | null
+          country: string | null
+          created_at: string
+          display_name: string | null
+          fitness_goal: string | null
+          health_score: number | null
+          height_cm: number | null
+          hourly_rate: number | null
+          id: string
+          job_description: string | null
+          job_title: string | null
+          linkedin_url: string | null
+          location: string | null
+          skills: string[] | null
+          state: string | null
+          updated_at: string
+          user_id: string
+          video_url: string | null
+          weight_kg: number | null
+        }
+        Insert: {
+          age?: number | null
+          available_for_hire?: boolean | null
+          avatar_url?: string | null
+          bio?: string | null
+          country?: string | null
+          created_at?: string
+          display_name?: string | null
+          fitness_goal?: string | null
+          health_score?: number | null
+          height_cm?: number | null
+          hourly_rate?: number | null
+          id?: string
+          job_description?: string | null
+          job_title?: string | null
+          linkedin_url?: string | null
+          location?: string | null
+          skills?: string[] | null
+          state?: string | null
+          updated_at?: string
+          user_id: string
+          video_url?: string | null
+          weight_kg?: number | null
+        }
+        Update: {
+          age?: number | null
+          available_for_hire?: boolean | null
+          avatar_url?: string | null
+          bio?: string | null
+          country?: string | null
+          created_at?: string
+          display_name?: string | null
+          fitness_goal?: string | null
+          health_score?: number | null
+          height_cm?: number | null
+          hourly_rate?: number | null
+          id?: string
+          job_description?: string | null
+          job_title?: string | null
+          linkedin_url?: string | null
+          location?: string | null
+          skills?: string[] | null
+          state?: string | null
+          updated_at?: string
+          user_id?: string
+          video_url?: string | null
+          weight_kg?: number | null
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
