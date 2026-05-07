@@ -169,6 +169,7 @@ export type Database = {
           created_at: string
           display_name: string | null
           fitness_goal: string | null
+          gender: string | null
           health_score: number | null
           height_cm: number | null
           hourly_rate: number | null
@@ -181,6 +182,7 @@ export type Database = {
           state: string | null
           updated_at: string
           user_id: string
+          username: string | null
           video_url: string | null
           weight_kg: number | null
         }
@@ -193,6 +195,7 @@ export type Database = {
           created_at?: string
           display_name?: string | null
           fitness_goal?: string | null
+          gender?: string | null
           health_score?: number | null
           height_cm?: number | null
           hourly_rate?: number | null
@@ -205,6 +208,7 @@ export type Database = {
           state?: string | null
           updated_at?: string
           user_id: string
+          username?: string | null
           video_url?: string | null
           weight_kg?: number | null
         }
@@ -217,6 +221,7 @@ export type Database = {
           created_at?: string
           display_name?: string | null
           fitness_goal?: string | null
+          gender?: string | null
           health_score?: number | null
           height_cm?: number | null
           hourly_rate?: number | null
@@ -229,6 +234,7 @@ export type Database = {
           state?: string | null
           updated_at?: string
           user_id?: string
+          username?: string | null
           video_url?: string | null
           weight_kg?: number | null
         }
